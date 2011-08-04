@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link href="CSS/index.css" rel="stylesheet" type="text/css" />
+        <title>Sitema para gerenciamento de seus anúncios</title>
+        <script language="javascript">
+
+            function foca() {
+                var g = document.login;
+                if (g.username.value.length == 0){
+                    g.username.focus();
+                    return false;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+    	<div id="conteudo">
+            <div id="topo">
+                <p class="titulo">PECUÁRIA NEGÓCIOS 2.0</p>
+                <p class="subtitulo">Sistema para anúncios </p>
+            </div>
+            <div id="telaLogin">
+                <fieldset>
+                    <legend>Faça seu Login</legend>
+                    <form action="login.php" method="post" name="login" id="login">
+                        <p>Usu&aacute;rio</p>
+                        <input name="username" type="text" id="username" size="30" maxlength="30" /><br>
+                        <p>Senha</p>
+                        <input name="senha" type="password" id="senha" style="width: 167px;float: left" /> <input type="submit" name="Submit" value="Ok " style="float: right" /><br>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        <div id="rodape_login">
+        	<p>Pecuária Negócios 2.0 - Todos os direitos reservados</p>
+        </div>
+    </body>
+</html>
+
