@@ -1,41 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link href="CSS/index.css" rel="stylesheet" type="text/css" />
-        <title>Sitema para gerenciamento de seus anúncios</title>
-        <script language="javascript">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Sistema de Gerencimento de Anúncios 1.0 - Pecuária Negócios</title>
+<link type="text/css" rel="stylesheet" href="View/CSS/conteudo.css" />
+<script language="javascript">
+	function foca() {
+		var g = document.login;
+		if (g.username.value.length == 0){
+			g.username.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<div id="conteudo">
+	<div id="topo">
+		<div class="titulo"> Pecuária Negócios 1.0
+			<p class="subtitulo">Sistema de Gerencimento de Anúncios</p>
+		</div>
 
-            function foca() {
-                var g = document.login;
-                if (g.username.value.length == 0){
-                    g.username.focus();
-                    return false;
-                }
-            }
-
-        </script>
-    </head>
-    <body>
-    	<div id="conteudo">
-            <div id="topo">
-                <p class="titulo">PECUÁRIA NEGÓCIOS 2.0</p>
-                <p class="subtitulo">Sistema para anúncios </p>
-            </div>
-            <div id="telaLogin">
-                <fieldset>
-                    <legend>Faça seu Login</legend>
-                    <form action="login.php" method="post" name="login" id="login">
-                        <p>Usu&aacute;rio</p>
-                        <input name="username" type="text" id="username" size="30" maxlength="30" /><br>
-                        <p>Senha</p>
-                        <input name="senha" type="password" id="senha" style="width: 167px;float: left" /> <input type="submit" name="Submit" value="Ok " style="float: right" /><br>
-                    </form>
-                </fieldset>
-            </div>
-        </div>
-        <div id="rodape_login">
-        	<p>Pecuária Negócios 2.0 - Todos os direitos reservados</p>
-        </div>
-    </body>
+	</div>
+	<div id="breadcrumb" style="text-align:center"> Sistema de Gerencimento de Anúncios</div>
+	<div id="telaLogin">
+		<fieldset>
+			<legend>Faça seu Login</legend>
+			<form action="_conteudo/login.php" method="post" name="login" id="login">
+				<p>Usu&aacute;rio</p>
+				<input name="username" type="text" id="username" size="30" maxlength="30" />
+				<br>
+				<p>Senha</p>
+				<input name="senha" type="password" id="senha" style="width: 167px;float: left" />
+				<input type="submit" name="Submit" value="Ok " style="float: right" />
+				<br>
+			</form>
+		</fieldset>
+	</div>
+</div>
+<div id="rodape_login">
+	<p>Pecuária Negócios 1.0 - Todos os direitos reservados</p>
+</div>
+</body>
 </html>
-
