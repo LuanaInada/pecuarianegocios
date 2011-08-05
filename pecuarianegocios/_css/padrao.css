@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#666;
+}
+
+a {
+    text-decoration:none; 
+}
+
+input, select {
+    border:1px solid #ccc;
+    background:url(../Imagens/bg_input.gif) bottom left repeat-x;
+    height:20px;
+    color:#333;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.link {
+    text-decoration:underline;
+    color:#630909;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.floatRight {
+    float:right;
+}
+
+.floatLeft {
+    float:left;
+}
+
+.paddingLeft15 {
+    padding-left: 15px;
+}
+
+.paddingLeft100 {
+    padding-left: 100px;
+}
+
+.inputPadrao {
+    background: url(../Imagens/bg_input.gif) repeat-x;
+    border: 1px solid #efefef;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    color: #333;
+    padding: 0 3px 0 3px;
+}
+
+.inputPadrao:hover {
+    color: #333;
+}
+
+.txtPadrao {
+    background: url(../Imagens/bg_input.gif) bottom repeat-x;
+    border: 1px solid #efefef;
+    line-height: 20px;
+    vertical-align: middle;
+    color: #999;
+    padding: 0 3px 0 3px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+#itensDosProdutos {
+    width:97%;
+    display:table;
+    padding:3px;
+    background:#f4f4f4;
+    line-height:23px;
+    margin-top: 3px;
+}
+
+#itensDosProdutos:hover {
+    background:#ebebeb !important;
+}
+
+#header {
+    width:98%;
+    height:55px;
+    padding:10px;
+}
+
+#header a {
+    float: right;
+    padding-top: 40px;
+    color: #630909;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#header a:hover {
+
+}
+
+#header img {
+    float:left;
+}
+
+#principal {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    width: 900px;
+}
+
+#principal h1 {
+    color:#630909;
+    font-size:18px;
+}
+
+#principal .botoes_topo {
+    float: right;
+}
+
+#principal fieldset {
+    width: 880px;
+    clear: both;
+    margin-top: 25px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #CDCDCD;
+}
+
+#principal fieldset legend {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 5px 0 8px;
+    color: #666;
+}
+
+#principal fieldset p {
+    padding: 10px 0 3px 0;
+    color: #666;
+}
+
+#principal fieldset input {
+    background: url(../Imagens/bg_input.gif) repeat-x;
+    border: 1px solid #efefef;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #333;
+}
+
+#principal table {
+    margin-top:10px;
+}
+
+#principal .gridTable {
+    border:1px solid #ccc;
+    margin-top:20px;
+    width:70%;
+}
+
+#principal .gridTable h2 {
+    font-size:16px;
+    background:url(../Imagens/bg_input.gif) bottom left repeat-x;
+    line-height:30px;
+    height:30px;
+    vertical-align:middle;
+    padding-left:10px;
+}
+
+#principal h3 {
+    font-size:14px;
+}
+
+
+h2 {
+
+}
+
+/*MENU PRINCIPAL*/
+.menu1 {
+    padding:0 0 0 32px;
+    margin: 0;
+    list-style: none;
+    height: 35px;
+    line-height: 35px;
+    background: url(../Imagens/bg-index.jpg) repeat-x bottom left;
+}
+.menu1 li {
+    float:left;
+}
+.menu1 li a {
+    display:block;
+    float:left;
+    height:35px;
+    line-height:35px;
+    color:#FFF;
+    text-decoration:none;
+    font-size:11px;
+    font-family:arial, verdana, sans-serif;
+    font-weight:bold;
+    text-align:center;
+    padding:0 0 0 8px;
+    cursor:pointer;
+}
+.menu1 li a b {
+    float:left;
+    display:block;
+    padding:0 16px 0 8px;
+}
+.menu1 li a b:hover {
+    border-bottom: 2px solid #990000;
+}
+
+/*MENU PRINCIPAL*/
+
+/*MENU ADMIN*/
+#menuAdmin {
+    margin-left: 10px;
+    width:150px;
+}
+
+#menuAdmin ul li {
+    list-style:none;
+    padding:8px;
+    margin-top:2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	background: url(../Imagens/bg-index.jpg) repeat-x bottom left;
+}
+
+#menuAdmin ul li a {
+    color:#FFF;
+}
+
+#menuAdmin ul li a:hover {
+    color: #CCC;
+}
+
+/*MENU ADMIN*/
+
+tr.zebra td {
+    background:#f9efef;
+}
+
+/* Modal */
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index:100;
+    background-color:#000;
+    display:none;
+}
+
+#boxes .window {
+    position:absolute;
+    left:0;
+    top:0;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9200;
+    padding:20px;
+}
+
+#boxes #dialog {
+    width:375px;
+    height:203px;
+    padding:10px;
+    background-color:#ffffff;
+}
+.imagemUpload {
+    height: 100px;
+    border: 1px solid #CCC;
+    margin-bottom: 15px;
+}
+
+/*Filtros*/
+#filtros {
+    width: 100%;
+    clear: both;
+    margin-top: 15px;
+    display: table;
+}
+#filtros ul {
+    display: inline;
+    list-style: none;
+}
+#filtros ul li {
+    background: url(../imagens/button_filtros.jpg) left top no-repeat !important;
+    width: 100px;
+    height: 22px !important;
+    line-height: 22px;
+    vertical-align: middle;
+    float: left;
+    text-align: center;
+    background-position:0 0;
+}
+#filtros ul li a {
+    text-decoration: none;
+    color: #666;
+}
+#filtros .filtros {
+    clear: both;
+    text-align: left;
+    border: 1px solid #ebebeb;
+    background: #ebebeb;
+    padding: 10px;
+}
+#filtros .filtros label {
+    padding-right: 30px;
+}
+#filtros .selected {
+    background: url(../imagens/button_filtros_selected.jpg) left top no-repeat !important;
+    width: 100px;
+    height: 22px !important;
+    line-height: 22px;
+    vertical-align: middle;
+    text-align: center;
+    float: left;
+    background-position:0 0;
+}
+#filtros .selected a {
+    color: #000 !important;
+    font-weight: bold;
+}
+#filtros .btnFiltrar {
+    float: right;
+    margin-top: 15px;
+    border: 1px solid #CCC;
+    background: #efefef;
+    color: #7a7a7a;
+}
+#box-toggle {
+    margin:0 auto;
+    text-align:justify;
+    font:12px/1.4 Arial, Helvetica, sans-serif;
+    border: 1px solid #efefef;
+    padding: 5px;
+    margin-top: 10px;
+}
+#box-toggle span {
+    display:block;
+    cursor:pointer;
+    font-size:12px;
+    color:#7a7a7a;
+}
+/*Fim Filtros*/
+
+/*Paginacao*/
+.paginacao {
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid #CCC;
+	float: left;
+	margin-top: 15px;
+	text-align: center;
+	padding-top: 3px;
+}
+
+.paginacao a {
+	padding: 5px;
+	color: #7a7a7a;
+}
+
+.paginacao a.current {
+	color: #900;
+	font-weight: bold;
+	font-size: 15px;
+}
