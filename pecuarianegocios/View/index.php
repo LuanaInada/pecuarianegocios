@@ -13,10 +13,10 @@
 		</ul>
 
 		<ul class="menu">
-			<li class="title">Minhas Configurações</li>
+                    <li class="title">Minhas Configura&ccedil;&otilde;es</li>
 			<li><a href="GeraisController.php">Configura&ccedil;&otilde;es Gerais</a></li>
                         <li><a href="ConfigImagens.php">Configurações de Imagens</a></li>
-			<li><a href="TopicosAjuda.php">Tópicos de Ajuda</a></li>
+                        <li><a href="TopicosAjuda.php">T&oacute;picos de Ajuda</a></li>
 		</ul>
 
 	</div>

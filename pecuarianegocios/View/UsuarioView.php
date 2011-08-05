@@ -1,21 +1,6 @@
 <?
-session_start();
 
-include "../Model/Usuario.php";
-include "../Model/UsuarioDAO.php";
-
-
-
-$acao =         $_POST['acao']          ? $_POST['acao']         : $_GET["acao"];
-$codigo=        $_POST['Codigo']       ? $_POST['Codigo']      : $_GET["codigo"];
-
-$userDAO = new UsuarioDAO();
-
-$usu_nome =   $_POST['Nome']   ? $_POST['Nome']    : $row['nome'];
-$usu_logon =  $_POST['Login']  ? $_POST['Login']   : $row['login'] ;
-$usu_senha =  $_POST['Senha']  ? $_POST['Senha']   : $row['senha'];
-
-
+include "../Controller/UsuarioController.php";
 include "../_inc/superior.php"; 
 ?>
 
@@ -45,13 +30,11 @@ include "../_inc/superior.php";
 		
 			<table class="tabela" cellpadding="0" cellspacing="0">
 				<tr class="titulo">
-					<td width="237px">Nome</td>
 					<td width="237px">Login</td>
 					<td width="237px">Senha</td>
 					<td align="center" width="65px">A&ccedil;&otilde;es</td>
 				</tr>
 				<tr>
-					<td> <input type="text" id="Nome" name="Nome" class="inputText" /> </td>
 					<td> <input type="text" id="Login" name="Login" class="inputText"  /> </td>
 					<td> <input type="text" id="Senha" name="Senha" class="inputText"  /> </td>
 					<td align="center">
@@ -65,27 +48,27 @@ include "../_inc/superior.php";
 		<h1>Gerenciador de Usu&aacute;rios</h1>
 		<table class="tabela" cellpadding="0" cellspacing="0">
 			<tr class="titulo">
-				<td width="237px">Nome</td>
+				
 				<td width="237px">Login</td>
 				<td width="237px">Senha</td>
 				<td align="center" width="65px">A&ccedil;&otilde;es</td>
 			</tr>
 			<? 
 			foreach ($userDAO->Lista() as $row){
-				$item =  "editar" . $row["codigo"];
+				$item =  "editar" . $row["codUsuario"];
 				if ($_POST["editar"] == $item) {
 					echo "<script>document.formUpdate.Nome.focus();</script>";		
 			?>
 			<form name="formUpdate" id="formUpdate" method="post" class="floatLeft">
 				<input type="hidden" value="salvar" name="acao" id="acao" />
-				<input type="hidden" value="<?=$row["codigo"]?>" name="Codigo" id="Codigo" />
+				<input type="hidden" value="<?=$row["codUsuario"]?>" name="Codigo" id="Codigo" />
 				
 				<tr>
-					<td> <input type="text" id="Nome" name="Nome" value="<?=$row["nome"]?>" class="inputText"  /> </td>
-					<td> <input type="text" id="Login" name="Login" value="<?=$row["login"]?>" class="inputText"  /> </td>
-					<td> <input type="text" id="Senha" name="Senha" value="<?=$row["senha"]?>" class="inputText"  /> </td>
+					
+					<td> <input type="text" id="Login" name="Login" value="<?=$row["emailUsuario"]?>" class="inputText"  /> </td>
+					<td> <input type="text" id="Senha" name="Senha" value="<?=$row["senhaUsuario"]?>" class="inputText"  /> </td>
 					<td align="center">
-						<img src="../_img/icon_cancel.jpg" onClick="location.href='UsuarioCad.php'" />
+						<img src="../_img/icon_cancel.jpg" onClick="location.href='UsuarioController.php'" />
 						<input type="image" src="../_img/icon_save.jpg" id="btnSalvar" name="btnSalvar" value="Salvar" />
 					</td>
 				</tr>
@@ -94,17 +77,17 @@ include "../_inc/superior.php";
 			
 				<? } else { ?>
 				<tr>
-					<td><?=$row["nome"]?></td>
-					<td><?=$row["login"]?></td>
-					<td><?=$row["senha"]?></td>
+					
+					<td><?=$row["emailUsuario"]?></td>
+					<td><?=$row["senhaUsuario"]?></td>
 					<td align="center">
 						<form name="formEditar" method="post" class="floatLeft" style="margin-left: 10px">
-							<input type="hidden" value="editar<?=$row["codigo"]?>" name="editar" id="editar" />
+							<input type="hidden" value="editar<?=$row["codUsuario"]?>" name="editar" id="editar" />
 							<input type="image" src="../_img/icon_edit.png" id="btnEdit" name="btnEdit" />
 						</form>
 						<form name="formExcluir" method="post" class="floatLeft" style="margin-left: 5px;">
 							<input type="hidden" value="excluir" name="acao" id="acao" />
-							<input type="hidden" value="<?=$row["codigo"]?>" name="Codigo" id="Codigo" />
+							<input type="hidden" value="<?=$row["codUsuario"]?>" name="Codigo" id="Codigo" />
 							<input type="image" src="../_img/icon_delete.jpg" id="excluir" name="excluir" />
 						</form>
 					</td>
