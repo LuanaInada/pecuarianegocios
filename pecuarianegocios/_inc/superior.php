@@ -18,7 +18,7 @@ if ($mensagem == "fechar"){
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
                 <title>Sistema de Gerencimento de An&uacute; 1.0 - Pecu&aacute;ria Neg&oacute;cios </title>
-		<link type="text/css" rel="stylesheet" href="_css/conteudo.css" />
+		<link type="text/css" rel="stylesheet" href="../_css/conteudo.css" />
 		<script language="javascript" type="text/javascript">
 			function foca() {
 				var g = document.login;
