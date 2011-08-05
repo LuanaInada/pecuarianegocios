@@ -1,0 +1,334 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight{
+	float: right;
+}
+
+.marginLeft {
+	margin-left: 10px;
+}
+
+.clear {
+	float: left;
+	width: 100%;
+	height: 1px;
+	clear: both;
+}
+
+html {
+	background: url(../_img/bg-top-index.jpg) repeat-x top left;
+}
+
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#101622;
+}
+
+#conteudo {
+	margin: 15px auto 0 auto;
+	width: 776px;
+	text-align: left;
+}
+
+
+/* Topo */
+#topo {
+	width: 100%;
+	display: table;
+	text-align: center;
+	cursor: default;
+}
+
+#topo .titulo {
+	width: 250px;
+	height: 70px;
+	margin-top: 10px;
+	float: left;
+	font-size: 29px;
+	color: #000;
+}
+
+#topo .subtitulo {
+	font-size: 13px;
+	color: #666;
+}
+
+#topo .logo {
+	width: 300px;
+	height: 80px;
+	float: right;
+}
+
+#topo .logo img {
+	height: 55px;
+	margin-top: 15px;
+}
+
+
+
+/* Breadcrumb */
+#breadcrumb {
+	width: 770px;
+	height: 35px;
+	line-height: 35px;
+	margin: 15px 0 15px 0;
+	padding-left: 6px;
+	text-align: left;
+	cursor: default;
+	font-weight: bold;
+	font-size: 11px;
+	background: #f4f4f4;
+}
+
+#breadcrumb a {
+	color: #333;
+	text-decoration: none;
+}
+
+#breadcrumb .sair {
+	float: right;
+	margin-right: 15px;
+	color: #990000;
+	text-decoration: none;
+}
+
+
+/* Login */
+#telaLogin {
+	margin: 100px auto 0 auto;
+	width: 230px;
+	display: table;
+	text-align: left;
+}
+
+#telaLogin fieldset {
+	padding: 10px 10px 20px 10px;
+	border: 1px solid #CDCDCD;
+}
+
+#telaLogin fieldset legend {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 5px 0 8px;
+	color: #000;
+}
+
+#telaLogin fieldset p {
+	padding: 10px 0 3px 0;
+	color: #333;
+}
+
+#telaLogin fieldset input {
+	background: url(../_img/bg_input.gif) repeat-x;
+	border: 1px solid #efefef;
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	padding-left: 5px;
+	color: #333;
+}
+
+#rodape_login {
+	width: 100%;
+	height: 51px;
+	vertical-align: middle;
+	background: url(../_img/bg-index.jpg) repeat-x top left transparent;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	cursor: default;
+}
+
+#rodape_login p {
+	line-height: 40px;
+	color: #FFF;
+	margin-top: 11px;
+	text-align: center;
+}
+
+
+
+/* Menus */
+#navi {
+	width: 610px;
+	margin: auto;
+	display: table;
+}
+
+#navi ul {
+	float: left;
+	width: 250px;
+	margin: 25px;
+}
+
+#navi ul li {
+	list-style: none;
+	text-align: center;
+	line-height: 40px;
+	background: #efefef;
+	margin: 5px 0 5px 0;
+}
+
+#navi ul li a {
+	color: #333;
+	text-decoration: none;
+}
+
+#navi ul li a:hover {
+	color: #000;
+}
+
+#navi ul li.title {
+	background: #dedede;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	cursor: default;
+}
+
+
+
+/* Formulários */
+.formulario {
+	width: 350px;
+	margin: 20px auto 0 auto;
+	display: table;
+}
+
+.formulario_2 {
+	width: 776px;
+	margin: 20px auto 50px auto;
+	display: table;
+}
+
+.formulario h1, .formulario_2 h1 {
+	margin: 0 0 20px 0;
+	font-size: 18px;
+}
+
+.formulario .inputButton, .formulario_2 .inputButton,  .inputButton {
+	background: #dedede;
+	border: 2px solid #efefef;
+	line-height: 25px;
+	vertical-align: middle;
+	padding: 0 5px 0 5px;
+	color:#36525F;
+	font-size:11px;
+	height: 28px;
+	font-weight: bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.formulario .inputText, .formulario .inputTextSmall, .formulario_2 .inputText, .formulario_2 .inputTextSmall {
+	background: #f4f4f4;
+	border: 2px solid #dedede;
+	height: 23px;
+	line-height: 23px;
+	vertical-align: middle;
+	padding: 0 5px 0 5px;
+	color: #333;
+	font-size: 14px;
+}
+
+.formulario .botoes, .formulario_2 .botoes {
+	float: right;
+	clear: both;
+	margin-top: 25px;
+}
+
+.botoes_2 {
+	float: right;
+	clear: both;
+	margin-bottom: 25px;
+}
+
+/* Tabela */
+.tabela {
+	font-size: 13px;
+	cursor: default;
+	width: 776px;
+}
+
+.tabela tr.titulo {
+	 background: #efefef;
+	 font-weight: bold;
+	 font-size: 14px;
+}
+
+.tabela tr:hover {
+	 background: #f4f4f4;
+}
+
+.tabela tr td {
+	 padding: 5px 0 5px 4px;
+}
+
+/* Paginação */
+.paginacao {
+	text-align: center;
+	margin-top: 20px;
+	background: #f4f4f4;
+}
+.paginacao a {
+	text-decoration: none;
+	color: #7a7a7a;
+	font-size: 11px;
+	padding: 0 5px 0 5px;
+}
+.paginacao a.current {
+	color: #006;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* Galeria do Admin */
+.galeria_projetos {
+	width: 100%;
+	display: table;
+}
+.galeria_projetos .img_galeria_projetos {
+	float: left;
+	width: 140px;
+	padding: 5px;
+	margin: 2px;
+	background: #f4f4f4;
+	border: 1px solid $d6d6d6;
+}
+.galeria_projetos .img_galeria_projetos:hover {
+	background: #E1E7F2;
+	border: 1px solid $CCC;
+	
+}
+.galeria_projetos .img_galeria_projetos p {
+	margin: 2px 0 2px 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.galeria_projetos .img_galeria_projetos p.title {
+	font-weight: bold;
+}
+
+/* Rodapé */
+#rodape {
+	width: 100%;
+	height: 51px;
+	vertical-align: middle;
+	background: url(_img/bg-index.jpg) repeat-x top left transparent;
+}
+
+#rodape p {
+	line-height: 40px;
+	color: #FFF;
+	margin-top: 11px;
+	text-align: center;
+}
