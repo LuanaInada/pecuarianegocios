@@ -1,6 +1,6 @@
 <? include("../_inc/superior.php") ?>
 	<div id="breadcrumb">
-		Olá <?=$_SESSION["nome"]?>, seja bem-vindo(a).
+		Olá <?=$_SESSION["email"]?>, seja bem-vindo(a).
 		<a href="index.php?mensagem=fechar" class="sair">Sair</a>
 	</div>
 

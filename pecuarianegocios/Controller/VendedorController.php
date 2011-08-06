@@ -36,4 +36,9 @@ if(isset($_POST['acao'])) {
 	 $vendedorDAO->Deleta($codigo);
     }
 }
+
+function listaVendedor(){
+    $dao = new VendedorDAO;
+    return $dao->Lista();
+}
 ?>

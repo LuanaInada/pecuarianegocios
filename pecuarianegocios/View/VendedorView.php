@@ -56,7 +56,7 @@ include "../_inc/superior.php";
 				<td align="center" width="65px">A&ccedil;&otilde;es</td>
 			</tr>
 			<? 
-			foreach ($vendedorDAO->Lista() as $row){
+			foreach (listaVendedor() as $row){
 				$item =  "editar" . $row["codVendedor"];
 				if ($_POST["editar"] == $item) {
 					echo "<script>document.formUpdate.Nome.focus();</script>";		

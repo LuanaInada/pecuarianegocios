@@ -21,7 +21,7 @@ class VendedorDAO extends PDOConnectionFactory {
 
             $stmt = $this->conex->prepare("INSERT INTO tb_vendedor (nomeVendedor, emailVendedor, telefoneVendedor, codEmpresa) VALUES (?,?,?,?)");
             $stmt->bindValue(1, $vendedor->getNomeVendedor());
-            $stmt->bindValue(2, $vendedor->getNomeVendedor() );
+            $stmt->bindValue(2, $vendedor->getEmailVendedor());
             $stmt->bindValue(3, $vendedor->getTelefoneVendedor());
             $stmt->bindValue(4, $vendedor->getCodEmpresa());
 
@@ -65,7 +65,7 @@ class VendedorDAO extends PDOConnectionFactory {
         try {
 		  $this->conex = PDOConnectionFactory::getConnection();  
             // executo a query
-	   	  $query = "DELETE FROM usuario WHERE codigo in ($id) ";
+	   	  $query = "DELETE FROM tb_vendedor WHERE codVendedor in ($id) ";
 		  $num = $this->conex->exec($query);
             // caso seja execuado ele retorna o número de rows que foram afetadas.
 		  // desconecta

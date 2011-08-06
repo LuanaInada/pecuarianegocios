@@ -6,12 +6,12 @@
 
 	$servidor_db = "localhost";
 	$usuario_db = "root";
-	$senha_db = "vendasweb";
+	$senha_db = "";
 	$nome_db = "pecuarianegocios";
 
 // criar uma var�vel valida para chama-la no arquivo main.php
 
-$valida = "valida.php";
+//$valida = "valida.php";
 
 
 if (!($con = mysql_pconnect($servidor_db,$usuario_db,$senha_db))) {
