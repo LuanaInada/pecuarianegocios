@@ -12,7 +12,7 @@ $userDAO = new UsuarioDAO();
 
 $usu_logon =  $_POST['Login']  ? $_POST['Login']   : $row['emailUsuario'] ;
 $usu_senha =  $_POST['Senha']  ? $_POST['Senha']   : $row['senhaUsuario'];
-$codEmpresa =  $_POST['CodEmpresa']  ? $_POST['CodEmpresa']   : $row['codEmpresa'];
+$codEmpresa =  $_SESSION["codEmpresa"]  ? $_SESSION["codEmpresa"]   : $row['codEmpresa'];
 
 
 if(isset($_POST['acao'])) {

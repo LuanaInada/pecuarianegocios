@@ -6,7 +6,7 @@
 
 include_once("../PDOConnectionFactory.class.php");
 
-class UsuarioDAO extends PDOConnectionFactory {
+class VendedorDAO extends PDOConnectionFactory {
 // irá receber uma conexão
     public $conex = null;
 
@@ -16,13 +16,14 @@ class UsuarioDAO extends PDOConnectionFactory {
     }
 
     // realiza uma inserção
-    public function Insere( $user ) {
+    public function Insere( $vendedor ) {
         try {
 
-            $stmt = $this->conex->prepare("INSERT INTO tb_usuario (emailUsuario, senhaUsuario, codEmpresa) VALUES (?,?,?)");
-            $stmt->bindValue(1, $user->getEmailUsuario());
-            $stmt->bindValue(2, $user->getSenhaUsuario() );
-            $stmt->bindValue(3, $user->getCodEmpresa() );
+            $stmt = $this->conex->prepare("INSERT INTO tb_vendedor (nomeVendedor, emailVendedor, telefoneVendedor, codEmpresa) VALUES (?,?,?,?)");
+            $stmt->bindValue(1, $vendedor->getNomeVendedor());
+            $stmt->bindValue(2, $vendedor->getNomeVendedor() );
+            $stmt->bindValue(3, $vendedor->getTelefoneVendedor());
+            $stmt->bindValue(4, $vendedor->getCodEmpresa());
 
 
             // executo a query preparada
@@ -37,15 +38,16 @@ class UsuarioDAO extends PDOConnectionFactory {
     }
 
     // realiza um Update
-    public function Update( $user ) {
+    public function Update( $vendedor ) {
         try {
 		   $this->conex = PDOConnectionFactory::getConnection();
         // preparo a query de update - Prepare Statement
-            $stmt = $this->conex->prepare("UPDATE tb_usuario SET emailUsuario=?, senhaUsuario=?  WHERE codUsuario=? and codEmpresa = ?");
-            $stmt->bindValue(1, $user->getEmailUsuario());
-            $stmt->bindValue(2, $user->getSenhaUsuario() );
-            $stmt->bindValue(3, $user->getCodUsuario() );
-            $stmt->bindValue(4, $user->getCodEmpresa() );
+            $stmt = $this->conex->prepare("UPDATE tb_vendedor SET nomeVendedor=?, emailVendedor=?, telefoneVendedor=? WHERE codVendedor=? and codEmpresa = ?");
+            $stmt->bindValue(1, $vendedor->getNomeVendedor());
+            $stmt->bindValue(2, $vendedor->getEmailVendedor() );
+            $stmt->bindValue(3, $vendedor->getTelefoneVendedor() );
+            $stmt->bindValue(4, $vendedor->getCodVendedor() );
+            $stmt->bindValue(5, $vendedor->getCodEmpresa() );
 
             // executo a query preparada
             $stmt->execute();
@@ -78,10 +80,10 @@ class UsuarioDAO extends PDOConnectionFactory {
 		   
 		  $this->conex = PDOConnectionFactory::getConnection();  
             if( $codigo <> null)
-                $param = " and codUsuario = $codigo ";
+                $param = " and codVendedor = $codigo ";
 
-           	$query = " select codUsuario, emailUsuario, senhaUsuario, codEmpresa
-                                                     from tb_usuario
+           	$query = " select codVendedor, nomeVendedor, emailVendedor, telefoneVendedor, codEmpresa
+                                                     from tb_vendedor
                                                      where 1=1 $param";
               
                 $stmt = $this->conex->query($query);
@@ -98,4 +100,4 @@ class UsuarioDAO extends PDOConnectionFactory {
     
     
 }
-?>
+      ?>

@@ -10,6 +10,7 @@
 			<li class="title">Meus Cadastros</li>
                         <li><a href="AnunciosController.php">Gerenciador de An&uacute;ncios</a></li>
                         <li><a href="UsuarioView.php">Gerenciador de Usu&aacute;rios</a></li>
+                        <li><a href="VendedorView.php">Gerenciador de Vendedores</a></li>
 		</ul>
 
 		<ul class="menu">
